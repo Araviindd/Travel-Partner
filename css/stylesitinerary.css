@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2{
+    font-weight: 300;
+}
+
+h4{
+    font-weight: 300;
+}
+body {
+    background: #f9f9f9;
+    min-height: 100vh;
+    overflow-x: hidden;
+    
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.875rem 6.25rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    pointer-events: none;
+    margin-right: 16.875rem;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #359381;
+    padding: 0.375rem 0.938rem;
+    border-radius: 1.25rem;
+    margin: 0 0.75rem;
+    font-weight: 600;
+}
+
+.navigation a:hover, 
+.navigation a.active {
+    background: #359381;
+    color: #ffff;
+}
+
+.parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#text {
+    position: absolute;
+    font-size: 5em;
+    color: #ffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+}
+
+.parallax img {
+    position: absolute;
+    top: 20;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.sec {
+    position: relative;
+    background: #003329;
+    padding: 100px;
+}
+
+.sec h2 {
+    font-size: 3em;
+    color: #ffff;
+    margin-bottom: 10px;
+}
+
+.sec p {
+    font-size: 1em;
+    color: #ffff;
+    font-weight: 300;
+}
+
+.bg{
+    background-color: #003329;
+    height: 63.313rem;
+    width: 100%;
+    display: flex;
+}
+.itinerary{
+    background-color: #002B23;
+    color: #f9f9f9;
+    width: 90%;
+    height: 800px;
+    margin-left: 5%;
+    margin-top: 110px;
+    border-radius: 20px;
+    align-content: center;
+    display: flex;
+    overflow: auto;
+
+}
+.downloadBtn{
+    width: 375px;
+    height: 60px;
+    align-items: last baseline;
+    border-radius: 20px;
+    background-color: #57CBB5;
+}
+
+.button-bg{
+    z-index: 1;
+    background-color: #003329;
+    padding-left: 70%;
+    padding-bottom: 40px;
+}
+
+.plan{
+    align-items: center;
+    justify-content: center;
+    
+}
+.bottom{
+    display: flex;
+    background-color: #1D413A;
+    height: 181px;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+.logobott{
+    padding-top: 30px;
+    padding-left: 50px;
+}
+.Aboutus{
+    padding-top: 60px;
+    padding-left: 550px;
+    color: #f9f9f9;
+    
+}
+.Contact{
+
+    color: #f9f9f9;
+    padding-top: 30px;
+    padding-left: 75%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
