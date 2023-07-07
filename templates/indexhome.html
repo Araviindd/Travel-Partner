@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Partner | Group 3</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/styleshome.css') }}">
+    
+</head>
+
+<body>
+
+    <header>
+        <h2 class="logo"><img src="{{ url_for('static', filename='/images/Logo.png') }}"></h2>
+        <nav class="navigation">
+            <a href="/" class="active">Home</a>
+            <a href="about">About</a>
+        </nav>
+    </header>
+
+    <section class="parallax">
+        
+        <img src="{{ url_for('static', filename='/images/hill1.png') }}" id="hill1">
+        <img src="{{ url_for('static', filename='/images/hill2.png') }}" id="hill2">
+        <img src="{{ url_for('static', filename='/images/hill3.png') }}" id="hill3">
+        <img src="{{ url_for('static', filename='/images/hill4.png') }}" id="hill4">
+        <img src="{{ url_for('static', filename='/images/hill5.png') }}" id="hill5">
+        <img src="{{ url_for('static', filename='/images/tree.png') }}" id="tree">
+        <h2 id="text">Travel Partner</h2>
+        <img src="{{ url_for('static', filename='/images/leaf.png') }}" id="leaf">
+        <img src="{{ url_for('static', filename='/images/plant.png') }}" id="plant">
+    </section>
+    <section class="sec-box">
+
+
+        <div class="sec">
+            <h2>Plan Your Dream Vacation With Ease.</h2>
+            <p>
+                from exploration to relaxation, Travel Partner makes travel planning a breeze.
+            </p>
+        </div>
+
+        <script src="{{ url_for('static', filename='/js/scripthome.js') }}"></script>
+
+
+        <div class="input-box">
+            <form method="POST" action="/generate_itinerary">
+                <div class="column1">
+                    <div class="destination-box">
+                        <h3>Travel Destination</h3>
+                        <input type="text" name="city/state" placeholder="city/state" class="inp-field text-field">
+                    </div>
+                    <div class="days-box">
+                        <h3>Travel Days</h3>
+                        <input type="number" name="number of days" class="inp-field text-field"
+                            placeholder="number of days">
+                    </div>
+                </div>
+                <div class="column2">
+                    <h3>Budget</h3>
+                    <div class="budget-box box-design inp-field">
+                        <label>
+                            <input type="radio" id="economy" name="budget" value="economy" class="polish">
+                            <span>Economy</span>
+                        </label>
+
+                        <label>
+                            <input type="radio" id="Normal" name="budget" value="normal" class="polish">
+                            <span>Normal</span>
+                        </label>
+
+                        <label>
+                            <input type="radio" id="Luxury" name="budget" value="luxury" class="polish">
+                            <span>Luxury</span>
+                        </label>
+
+
+                    </div>
+                </div>
+
+
+                <div class="column3">
+                    <h3>Travel with</h3>
+                    <div class="travel-box box-design inp-field">
+                        <label>
+                            <input type="radio" id="single" name="travel-with" value="single" class="polish">
+                            <span>Single</span>
+                        </label>
+
+                        <label>
+                            <input type="radio" id="couple" name="travel-with" value="couple" class="polish">
+                            <span>Couple</span>
+                        </label>
+
+                        <label>
+                            <input type="radio" id="family" name="travel-with" value="family" class="polish">
+                            <span>Family</span>
+                        </label>
+
+                        <label>
+                            <input type="radio" id="friends" name="travel-with" value="friends" class="polish">
+                            <span>Friends</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="column4">
+                    <h3>Interests</h3>
+                    <div class="interest-box box-design inp-field">
+                        <label>
+                            <input type="checkbox" id="historical" name="interests" value="historical" class="polish">
+                            <span>Historical</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" id="nature" name="interests" value="nature" class="polish">
+                            <span>Nature</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" id="entertainment" name="interests" value="entertainment" class="polish">
+                            <span>Entertainment</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" id="shopping" name="interests" value="shopping" class="polish">
+                            <span>Shopping</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" id="relaxing" name="interests" value="relaxing" class="polish">
+                            <span>Relaxing</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" id="adventure" name="interests" value="adventure" class="polish">
+                            <span>Adventure</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" id="food" name="interests" value="food" class="polish">
+                            <span>Food</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" id="nightlife" name="interests" value="nightlife" class="polish">
+                            <span>Nightlife</span>
+                        </label>
+
+                    </div>
+                </div>
+                <div class="coloumn5">
+                    <input type="submit" name="generatebutton" class="submitbutton" value="Generate my plan">
+            </form>
+            <a href="recording" class="button">
+                <img src="{{ url_for('static', filename='/images/voice rec.png') }}" alt="voice rec">
+              </a>
+        </div>
+    </section>
+    <div class="bottom">
+        <h2 class="logobott"><img src="{{ url_for('static', filename='/images/Logo.png') }}"></h2>
+
+        <div class="Contact">
+            <h3>Contact Us</h3>
+            <h4 class="place">Kottayam, Kerala</h4>
+            <h4 class="num">+91 89336 54724</h4>
+        </div>
+    </div>
+
+</body>
+
+</html>

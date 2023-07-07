@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Result Page</title>
+    <style>
+      body {
+        background-color: #003329;
+      }
+
+      #loading-message {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        color: white;
+        animation: pulse 1s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .submit-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: white;
+        border: none;
+        color: black;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .submit-button:hover {
+        background-color: #ccc;
+      }
+
+      .submit-button.selected {
+        background-color: #ffcc00;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading-message">Your result is preparing...</div>
+    <form action="/generate_itinerary_vo">
+      <button class="submit-button" type="submit" value="Continue"></button>   
+    </form>
+    <script>
+      function toggleSelection() {
+        var button = document.querySelector(".submit-button");
+        button.classList.toggle("selected");
+      }
+    </script>
+  </body>
+</html>

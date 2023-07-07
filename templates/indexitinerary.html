@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/stylesitinerary.css') }}">
+    
+    <script src="{{ url_for('static', filename='/js/scriptitinerary.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<body>
+    <header>
+        <h2 class="logo"><img src="{{ url_for('static', filename='/images/Logo.png') }}"></h2>
+        <nav class="navigation">
+            <a href="/">Home</a>
+            <a href="about">About</a>
+        </nav>
+    </header>
+    <section class="parallax">
+        <img src="{{ url_for('static', filename='/images/hill1.png') }}" id="hill1">
+        <img src="{{ url_for('static', filename='/images/hill2.png') }}" id="hill2">
+        <img src="{{ url_for('static', filename='/images/hill3.png') }}" id="hill3">
+        <img src="{{ url_for('static', filename='/images/hill4.png') }}" id="hill4">
+        <img src="{{ url_for('static', filename='/images/hill5.png') }}" id="hill5">
+        <img src="{{ url_for('static', filename='/images/tree.png') }}" id="tree">
+        <img src="{{ url_for('static', filename='/images/leaf.png') }}" id="leaf">
+        <img src="{{ url_for('static', filename='/images/plant.png') }}" id="plant">
+    </section>
+    <div class="bg">
+        <div class="itinerary">
+            <p class="plan">{{ itinerary|safe }}</p>
+           
+        </div>
+    </div>
+    <div class="button-bg"><button class="downloadBtn" id="downloadBtn">Download TXT</button></div>
+    
+
+    <div class="bottom">
+        <h2 class="logobott"><img src="{{ url_for('static', filename='/images/Logo.png') }}"></h2>
+
+        <div class="Contact">
+            <h3>Contact Us</h3>
+            <h4 class="place">Kottayam, Kerala</h4>
+            <h4 class="num">+91 89336 54724</h4>
+        </div>
+    </div>
+
+
+    <script>
+        const downloadButton = document.getElementById('downloadBtn');
+        downloadButton.addEventListener('click', () => {
+            const content = document.querySelector('.plan').textContent;
+            const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
+            saveAs(blob, "itinerary.txt");
+        });
+    </script>
+
+</body>
+
+</html>

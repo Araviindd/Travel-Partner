@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesabout.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+     
+
+    <header>
+        <h2 class="logo"><img src="{{ url_for('static', filename='images/Logo.png') }}"></h2>
+        <nav class="navigation">
+            <a href="/">Home</a>
+            <a href="#" class="active">About</a>
+        </nav> 
+    </header>
+    <section class="parallax">
+        <img src="{{ url_for('static', filename='images/hill1.png') }}" id="hill1">
+        <img src="{{ url_for('static', filename='images/hill2.png') }}" id="hill2">
+        <img src="{{ url_for('static', filename='images/hill3.png') }}" id="hill3">
+        <img src="{{ url_for('static', filename='images/hill4.png') }}" id="hill4">
+        <img src="{{ url_for('static', filename='images/hill5.png') }}" id="hill5">
+        <img src="{{ url_for('static', filename='images/tree.png') }}" id="tree">
+        <img src="{{ url_for('static', filename='images/leaf.png') }}" id="leaf">
+        <img src="{{ url_for('static', filename='images/plant.png') }}" id="plant">
+    </section>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script> 
+    <div class="bg">  
+        <div class="Line1">
+            <h2 class="headline1">Tailor-made travel plans. </h2>   
+            <p class="textline1">Travel Partner offers customized itineraries based
+             on your preferences, including destination,
+              duration, budget, and interests.
+            </p>
+        </div>
+        
+        <div class="Line2">
+               
+            <p class="textline2">Our platform helps you create a travel itinerary that suits your needs.
+                 With a few clicks, you can add destinations and activities,
+                 and get a preview of your itinerary.
+            </p>
+            <h2 class="headline2">Smooth itinerary creation.</h2>
+        </div>
+
+        <div class="Line3">
+            <h2 class="headline3">Stick to your budget. </h2>   
+            <p class="textline3">With Travel Partner, you can easily find 
+                affordable travel options that fit your budget, 
+                and create a budget-friendly itinerary for your ideal vacation.
+            </p>
+        </div>
+
+        <div class="Line4">
+               
+            <p class="textline4">No more scrolling through pages looking for recommendations. 
+                We have everything you need in one place. Our platform curates destinations and activities, 
+                so you can spend more time exploring and less time planning.
+            </p>
+            <h2 class="headline4">Save time and effort.</h2>
+        </div>
+    </div>
+    <div class="bottom">
+        <h2 class="logobott"><img src="{{ url_for('static', filename='images/Logo.png') }}"></h2>
+        <h2 class="Aboutus">About Us</h2>
+        <div class="Contact">
+          <h3>Contact Us</h3>
+          <h4 class="place">Kottayam, Kerala</h4>
+          <h4 class="num">+91 89336 54724</h4>
+        </div>     
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>  
+</body>
+</html>
